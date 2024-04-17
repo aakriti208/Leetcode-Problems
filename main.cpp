@@ -55,6 +55,5 @@ int main()
         cout << nums1[i] << " ";
     }
     cout << endl;
-
     return 0;
 }
