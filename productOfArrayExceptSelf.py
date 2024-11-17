@@ -26,4 +26,5 @@ class Solution:
             # Then we just return the result
         return result
                    
-
+    # Time complexity : O(n)
+    # Memory complexity : O(1)
