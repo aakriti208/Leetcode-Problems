@@ -19,3 +19,6 @@ class Solution:
                 max_profit = profit
             
         return max_profit
+    
+    # Space complexity : O(1)
+    # Time complexity : O(n) 

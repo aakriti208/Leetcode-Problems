@@ -13,3 +13,6 @@ class Solution:
             hashset.add(n)
         # If we dont find any duplicates, we just return False
         return False
+    
+    # Space complexity : O(n)
+    # Time complexity : O(n)
