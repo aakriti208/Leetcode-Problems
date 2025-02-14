@@ -4,7 +4,7 @@ class Solution:
         res = nums[0]
         # Then we initialize the left and the right pointer
         l, r = 0, len(nums) - 1
-        # Keep running a binary search until the condition is in a vlaid position
+        # Keep running a binary search until the condition is in a valid position
         while l <= r:
             # Check if the subarray is sorted
             if nums[l] < nums[r]:
@@ -21,3 +21,5 @@ class Solution:
             else:
                 r = m - 1
         return res
+    
+
