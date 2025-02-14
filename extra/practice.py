@@ -49,14 +49,14 @@
 
 
 
-def sumOfArray(arr):
-    sum = 0
-    for x in arr:
-        sum = sum + x
-    return sum
+# def sumOfArray(arr):
+#     sum = 0
+#     for x in arr:
+#         sum = sum + x
+#     return sum
 
-arr = [[1,2,3,4,5,6]]
-print("Sum is", sumOfArray(arr))
+# arr = [[1,2,3,4,5,6]]
+# print("Sum is", sumOfArray(arr))
 
 
 class Solution:
