@@ -14,3 +14,6 @@ class Solution:
             # r += 1 is not needed coz the for loop is gonna take care of it
         # Out left index has been handling how many unique values we have in our array so we can just return that
         return l
+    
+    # T.C : O(n)
+    # S.C : O(1)
