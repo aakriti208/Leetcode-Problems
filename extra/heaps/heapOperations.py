@@ -27,4 +27,10 @@ heapq.heapify(arr)
 print(arr)
 
 
+# Finding the k smallest/largest elements in a heap
+k = 6
+print(heapq.nsmallest(k, arr))
+print(heapq.nlargest(k, arr))
 
+# Implementing max-heap 
+max_heap = []
