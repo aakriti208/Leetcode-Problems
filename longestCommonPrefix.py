@@ -11,6 +11,18 @@ def longestCommonPrefix(strs):
     # we start from 1 because we've already used the first word as the base, and we dont compare it with itself 
     for i in range(len(base)):
         for word in strs[1:]:
-            # 
+            # The we'll check for two things : if either of them are true, we return early
+            # First, we check if index is out of bound, then we compare the character at index i of the base word to the index of the current word we're on
+            # If the character at both word does not match, we return the letters upto that point. 
+            # this returns character from index 0 to index i, excluding i
+            if i == len(base) or base[i] != word[i]:
+                return base[0:i]
+            # Suppose we have ["action", "actor", "a"]
+            # if we reach the last line, we know that it is the longest word on the array, and we can directly return it
+            
+    return base
+            
     
-     
+
+        
+    
