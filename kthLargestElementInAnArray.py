@@ -7,7 +7,7 @@ class Solution(object):
         # We loop through the numbers, and just ask a simple question: Hey, does the heap have less than k elements?
         for num in nums:
             if len(min_heap) < k:
-                #is the length of our heap is less than k, we want to push into the heap
+                #if the length of our heap is less than k, we want to push into the heap
                 heapq.heappush(min_heap, num)
             else:
                 # otherwise, we want to do a push pop operation. We push an element into the heap and pop one element off after that
@@ -20,4 +20,5 @@ class Solution(object):
     # T.C: O(nlogk) - we're doing a pushpop operation which is gonna take logk, and doing it n times
     # S.C: O(k) - we're storing it in k space
                 
-        
+         
+    
