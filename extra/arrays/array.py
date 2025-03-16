@@ -28,3 +28,52 @@ class Solution:
 if __name__ == "__main__":
     solution = Solution()
     solution.reverse()
+    
+    
+    from array import *
+
+numbers = [5,4,3,6,9,10,23]
+
+
+# List comprehension 
+squares = [x//2 if x > 5 else x == 0 for x in numbers] 
+print(squares)
+
+
+
+
+
+
+# for using list methods
+
+# for i, num in enumerate(numbers):
+#     # numbers.pop()
+#     print(numbers[i])
+#     print(num)
+    
+# numbers.pop(1)
+# numbers.insert(3, 99 )  
+# print(numbers)
+# numbers.count(6)
+
+
+# only for printing or accessing elements : 
+
+# for val in numbers:
+#     print(val)
+
+# accessing and slicing 
+# print(numbers[2])
+# print(numbers[-3])
+
+# for i in range(len(numbers)+1):
+#     print(numbers[-i])
+    
+# print(numbers[1:4])
+# print(numbers[1:])
+# print(numbers[:3])
+# print(numbers[::4])
+
+# Reverses the array
+# print(numbers[::-1])
+
