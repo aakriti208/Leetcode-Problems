@@ -150,3 +150,16 @@ def count_frequency(input_string):
     
 result = count_frequency('aabbbbccdd')
 print(result)
+
+
+
+def analyze_text(text):
+    words = text.split()
+    word_count = len(words)
+    letter_count = {}
+    for char in text.lower():
+        if char.isalpha():
+            letter_count[char] = letter_count.get(char, 0) + 1
+    return {'words': word_count, 'letters': letter_count}
+print(analyze_text('hello world'))
+# {'words': 2, 'letters': {'h': 1, 'e': 1, 'l': 3, 'o': 2, 'w': 1, 'r': 1, 'd': 1}}
