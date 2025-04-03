@@ -17,6 +17,10 @@ class Solution:
                 ord("0") <= ord(c) <= ord("9") )
     
 
+sol = Solution()
+results = sol.palindrome("A man, a plan, a canal: Panam") 
+print(results)
+
 
 class Solution:
     def isPalindrome(self, s: str) -> bool:

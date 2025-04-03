@@ -163,3 +163,64 @@ def analyze_text(text):
     return {'words': word_count, 'letters': letter_count}
 print(analyze_text('hello world'))
 # {'words': 2, 'letters': {'h': 1, 'e': 1, 'l': 3, 'o': 2, 'w': 1, 'r': 1, 'd': 1}}
+
+
+# Count the occurrences of each word in a paragraph
+def count_words(string):
+    if not string:
+        return {}
+    dictionary = {}
+    input = string.split(' ')
+    for char in input:
+        if char not in dictionary:
+            dictionary[char] = 1
+        else:
+            dictionary[char] += 1
+            
+    return dictionary
+    
+output = count_words('hello hi bye hello hi')
+print(output)
+
+
+# getting word count in a dictionary : 
+def count(string):
+    input = string.split(" ")
+    word_count = {}
+    for word in input:
+        word_count[word] = word_count.get(word, 0) + 1
+    return word_count
+
+
+# find the most frequent word in a text
+
+def count_words(sentence):
+    words = sentence.split(" ")
+    refined_words = {}
+    for word in words:
+        refined_words[word] = refined_words.get(word, 0) + 1
+    highest_count = max(refined_words.values())
+    frequent_words = [word for word, count in refined_words.items() if count == highest_count]
+    return frequent_words, highest_count
+    
+    
+output = count_words("hello hi hello hi hello hi bye")
+print(output)
+
+
+# find the most frequent word in a text
+
+def categorize_entries(entries):
+    positive_words = {"happy", "joy", "excited", "good", "great"}
+    negative_words = {"sad", "angry", "bad", "terrible", "upset"}
+    categories = {'positive' : [], 'negative' : [], 'neutral' : []}
+    for entry in entries:
+        words = set(entry.lower().split())
+        if words & positive_words:
+            categories['positive'].append(entry)
+        elif words & negative_words:
+            categories['negative'].append(entry)
+    return categories
+    
+    
+print(categorize_entries(["I am happy", "I am sad", "It was okay"]))
