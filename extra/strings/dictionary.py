@@ -224,3 +224,34 @@ def categorize_entries(entries):
     
     
 print(categorize_entries(["I am happy", "I am sad", "It was okay"]))
+
+
+# Detect Abusive Language and Censor It
+
+def detect_language(entries):
+    words = entries.split()
+    blacklisted_words = {"bad", "negative", "trauma"}
+    censored_word = []
+    for word in words:
+        if word in blacklisted_words:
+            censored_word.append("***")
+        else:
+            censored_word.append(word)
+    return " ".join(censored_word)
+        
+        
+print(detect_language("this is a bad word"))
+
+
+# most common word
+from collections import Counter
+
+def most_common(messages, n):
+    text = messages.lower().split()
+    word_count = Counter(text)
+    return word_count.most_common(n)
+    
+print(most_common("hello world hello AI", 2))
+
+
+
