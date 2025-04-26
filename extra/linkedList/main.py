@@ -1,5 +1,5 @@
 from linkedList import singlyLinkedList
-from operations import traverse
+from operations import traverse, create_linked_list
 
 if __name__ == "__main__":
     node1 = singlyLinkedList("2")
@@ -8,5 +8,8 @@ if __name__ == "__main__":
     node1.next = node2
     node2.next = node3
 
-    traverse(node1)
+    values = ["1", "3", "4", "5"]
+    
+    list_head = create_linked_list(values)
+    traverse(list_head)
         
