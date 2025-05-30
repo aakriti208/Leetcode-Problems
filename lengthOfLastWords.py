@@ -5,7 +5,7 @@ class Solution(object):
         # We also keep a variable count that counts the length of the word
         count = 0
         # We check to see if the word has reached to a point where there is empty space
-        while s[i] == " ":
+        while s[i] == " ":     
             # if there is, we decrement the pointer by one
             i -= 1
         while i >= 0 and s[i] != " ":

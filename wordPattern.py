@@ -15,3 +15,4 @@ class Solution:
                 if hashMap[charP] != wordsS:
                     return False
         return True
+
