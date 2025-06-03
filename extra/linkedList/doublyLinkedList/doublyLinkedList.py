@@ -94,6 +94,17 @@ class DoublyLinkedList:
             self.head = dummy_node
         return dummy_node
         
+    def insertAtTail(self, val):
+        dummy_node = Node(val)
+        if self.head is None:
+            self.head = dummy_node
+            return 
+        
+        tail = self.head
+        while tail.next is not None:
+            tail = tail.next
+        tail.next = dummy_node
+        dummy_node.prev = tail
         
         
 arr = [1, 5, 7, 13, 55, 99]
