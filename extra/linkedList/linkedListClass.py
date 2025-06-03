@@ -38,6 +38,14 @@ class LinkedList:
             current = current.next
             count += 1
         print(count)
+    
+    def searchLL(self, val):
+        current = self.head
+        while current:
+            if current.data == val:
+                print("Present") 
+                return 
+            current = current.next
         
 arr = [1,2,4,8,10,12]
 ll = LinkedList()
