@@ -26,9 +26,40 @@ class DoublyLinkedList:
             curr = curr.next
         print("None")
         
+    def deleteHead(self):
+        if self.head is None:
+            return 
+        #if only one node, set the head to none and delete
+        if self.head.next is None:
+            self.head = None
+        else:
+            # if more than one node, set head to the second node
+            # remove the back link from the new head to the old head that cuts off the old head from the list
+            self.head = self.head.next
+            self.head.prev = None
+            
+    def deleteTail(self):
+        if self.head is None:
+            return 
+        if self.head.next is None:
+            self.head = None
+        else:
+            tail = self.head
+            # go till the end of the list
+            while tail.next is not None:
+                tail = tail.next
+            # tail.prev points to [55]...so [55].next = None will be done and [99] will be unlinked and discarded 
+            tail.prev.next = None
+            
+                
+              
+        
+        
 arr = [1, 5, 7, 13, 55, 99]
 ll = DoublyLinkedList()
 ll.convertToLL(arr)
+ll.deleteHead()
+ll.deleteTail()
 ll.printLL()
         
     
