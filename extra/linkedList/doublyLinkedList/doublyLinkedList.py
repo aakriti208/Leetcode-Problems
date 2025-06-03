@@ -49,10 +49,39 @@ class DoublyLinkedList:
             while tail.next is not None:
                 tail = tail.next
             # tail.prev points to [55]...so [55].next = None will be done and [99] will be unlinked and discarded 
-            tail.prev.next = None
-            
-                
+            tail.prev.next = None            
               
+    def deleteKthElement(self, k):
+        if self.head is None or k <= 0:
+            return
+        
+        if k == 1:
+            self.deleteHead()
+            return
+        
+        count = 0
+        current = self.head
+        # go to the kth node
+        while current and count < k:
+            current = current.next
+            count += 1
+        # if k > length of the list, do nothing
+        if current is None: 
+            return 
+        # delete the tail
+        if current.next is None:
+            self.deleteTail()
+            return
+        # delete the middle node
+        prev_node = current.prev
+        next_node = current.next
+        prev_node.next = next_node
+        next_node.prev = prev_node
+        
+        #optional only for cleanup
+        current.prev = None
+        current.next= None
+        
         
         
 arr = [1, 5, 7, 13, 55, 99]
@@ -60,6 +89,7 @@ ll = DoublyLinkedList()
 ll.convertToLL(arr)
 ll.deleteHead()
 ll.deleteTail()
+ll.deleteKthElement(2)
 ll.printLL()
         
     
