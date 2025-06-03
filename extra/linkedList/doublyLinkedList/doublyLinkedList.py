@@ -83,6 +83,18 @@ class DoublyLinkedList:
         current.next= None
         
         
+    def insertAtHead(self, val):
+        dummy_node = Node(val)
+    
+        if self.head is None:
+            self.head = dummy_node 
+        else:
+            dummy_node.next = self.head
+            self.head.prev = dummy_node
+            self.head = dummy_node
+        return dummy_node
+        
+        
         
 arr = [1, 5, 7, 13, 55, 99]
 ll = DoublyLinkedList()
