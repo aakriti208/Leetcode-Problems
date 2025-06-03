@@ -31,6 +31,13 @@ class LinkedList:
             temp = temp.next
         print("None")
         
+    def lengthOfLL(self):
+        count = 0
+        current = self.head
+        while current:
+            current = current.next
+            count += 1
+        print(count)
         
 arr = [1,2,4,8,10,12]
 ll = LinkedList()
