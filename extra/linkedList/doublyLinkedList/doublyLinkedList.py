@@ -106,6 +106,37 @@ class DoublyLinkedList:
         tail.next = dummy_node
         dummy_node.prev = tail
         
+    def insertAtKth(self, val, k):
+        if self.head is None or k <= 0:
+            return
+        if k == 1:
+            self.insertAtHead(val)
+        
+        current = self.head
+        count = 1
+        
+        while current and count < k - 1:
+            current = current.next
+            count += 1
+        if current.next is None:
+            self.deleteTail(val)
+            return
+        
+        # insert at kth position
+        new_node = Node(val)
+        next_node = current.next
+        current.next = new_node
+        new_node.prev = current
+        new_node.next = next_node
+        next_node.prev = new_node
+        
+        # # insert before kth position
+        # prev_node = current.prev
+        # prev_node.next = new_node
+        # new_node.prev =prev_node
+        # new_node.next = current
+        # current.prev = new_node
+        
         
 arr = [1, 5, 7, 13, 55, 99]
 ll = DoublyLinkedList()
@@ -113,6 +144,11 @@ ll.convertToLL(arr)
 ll.deleteHead()
 ll.deleteTail()
 ll.deleteKthElement(2)
+ll.insertAtHead(1)
+ll.insertAtTail(13)
+ll.insertAtKth(2, 2)
 ll.printLL()
+        
+    
         
     
