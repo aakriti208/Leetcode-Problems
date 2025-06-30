@@ -1,4 +1,4 @@
-def prec(c):
+def priority(c):
     if c == '^':
         return 3
     elif c in ('/', '*'):
@@ -21,10 +21,11 @@ def infix_to_postfix(s):
                 res += st.pop()
             st.pop()
         else:
-            while st and prec(c) <= prec(st[-1]):
+            while st and priority(c) <= priority(st[-1]):
                 res += st.pop()
             st.append(c)
     while st:
         res += st.pop()
     return res
+
 
