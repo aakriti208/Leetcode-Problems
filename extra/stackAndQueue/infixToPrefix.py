@@ -21,4 +21,19 @@ def infixToPrefix(self, str):
             res += c
         elif c == '(':
             res += c 
+            st.append(c)
+        elif c == ')':
+            while st and st[-1] != '(':
+                res += st.pop()
+            st.pop()
+        else:
+            while st and priority(c) <= priority(st[-1]):
+                res += st.pop()
+            st.append(c)
+    while st:
+        res += st.pop()
+        
+    return res
+            
+            
     
