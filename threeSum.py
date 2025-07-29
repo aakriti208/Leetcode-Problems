@@ -34,7 +34,7 @@ class Solution:
                 while nums[l] == nums[l - 1] and l < r:
                     # Keep shifting the left pointer
                     l += 1
-            return result
+        return result
         
     # Time Complexity :
     # Space Complexity :
