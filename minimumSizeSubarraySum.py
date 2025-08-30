@@ -1,6 +1,6 @@
 class Solution:
     def minSubarraySum(self, nums, target):
-        l, total = 0, 9
+        l, total = 0, 0
         result = float("inf")
         for r in range(len(nums)):
             total += nums[r]
