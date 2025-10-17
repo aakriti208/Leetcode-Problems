@@ -13,6 +13,5 @@ class Solution:
             else:
                 root = root.right
             # root = root.left if val < root.val else root.right
-            return root
-        return None
+        return root
         
