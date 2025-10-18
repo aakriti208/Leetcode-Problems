@@ -11,5 +11,18 @@ class Solution:
         if root.val == key:
             return root
         
-        
+        dummy = TreeNode(root.val)
+        while root is not None:
+            if root.val > key and root.left.val != key:
+                root = root.right
+                if root.right == key:
+                    del root.right
+                    root = root.left.right
+            elif root.val < key:
+                root = root.left
+                if root.left == key:
+                    del root.left
+                    root = root.right.left
+        return root
+   
         
