@@ -15,7 +15,7 @@ class Solution:
     #     new_array = [x*x for x in array]
     #     print(new_array)
 
-    # def array_filetring(self):
+    # def array_filtering(self):
     #     array = [1, 2, 3, 4, 5]
     #     new_array = [x for x in array if x % 2 == 0]
     #     print(new_array)
