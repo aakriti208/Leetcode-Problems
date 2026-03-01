@@ -20,3 +20,10 @@ class Solution:
 
 
 
+    def containsDuplicateAlt(self, nums):
+        hashMap = {}
+        for n in nums:
+            if n in hashMap:
+               return True
+            hashMap[n] = 1
+        return False

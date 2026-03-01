@@ -119,12 +119,13 @@ for char in s:
 
 # Alternatively:
 
+s="hello"
 for char in s:
     freq[char] = freq.get(char, 0) + 1
 
 # Comparison with alternatives:                                                                                                                               
                                                                                                                                                               
-  # Method 1: Regular dict with .get() (what you have)                                                                                                        
+# Method 1: Regular dict with .get() (what you have)                                                                                                        
 freq = {}                                                                                                                                                     for char in s:                                                                                                                                              
     
     freq[char] = freq.get(char, 0) + 1                                                                                                                      
