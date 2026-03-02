@@ -1,3 +1,5 @@
+from collections import deque
+
 # Node structure
 
 class TreeNode:
@@ -87,13 +89,38 @@ class TreeNode:
         result, stack = [], [root]
         while stack:
             node = stack.pop()
-            result.appent(node.val)
+            result.append(node.val)
             if node.left:
-                result.append(node.left)
+                stack.append(node.left)
             if node.right:
-                result.append(node.right)
+                stack.append(node.right)
         # reverse to get postorder from modified preorder
         return result[::-1]
     
     
     # time complexity : O(n), space complexity : O(h)
+    
+    
+    # BFS ---> Level order (Queue)
+    # Find shortest path, level-by-level processing, serialize tree, minimum depth
+    
+    
+    def level_order(root):
+        if not root: return []
+        q = deque([root])
+        result = []
+        while q:
+            level = []
+            for _ in range(len(q)):
+                node = q.popleft()
+                level.append(node.val)
+                if node.left:
+                    q.append(node.left)
+                if node.right:
+                    q.append(node.right)
+            result.append(level)
+        return result
+        
+
+
+    
