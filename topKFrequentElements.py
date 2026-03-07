@@ -18,8 +18,6 @@ class Solution:
                 res.extend(buckets[i])
             if len(res) == k:
                 return res
-    
-
 
 
         n = len(nums)
