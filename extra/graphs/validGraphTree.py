@@ -1,4 +1,4 @@
-from unionFind import UnionFind
+from extra.graphs.unionFind import UnionFind
 
 def validGraphTree(n, edges):
     uf = UnionFind()

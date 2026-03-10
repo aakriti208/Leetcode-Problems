@@ -1,4 +1,4 @@
-from unionFind import UnionFind
+from extra.graphs.unionFind import UnionFind
 
 def numberOfComponents(n, edges):
     uf = UnionFind()

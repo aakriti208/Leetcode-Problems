@@ -1,7 +1,7 @@
 import sys                                                                                                                              
 from pathlib import Path                                                                                                                   
-from numberOfComponentsInADG import UnionFind  # replace with actual class name                                                     
-from unionFind import UnionFind                                                                                                         
+from extra.graphs.numberOfComponentsInADG import UnionFind  # replace with actual class name                                                     
+from extra.graphs.unionFind import UnionFind                                                                                                         
                                                                                                                                           
                                                                                                                                           
 class TestNumberOfComponents:                                                                                                           

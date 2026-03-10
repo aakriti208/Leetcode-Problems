@@ -1,6 +1,6 @@
 # Kahn's Algorithm
 
-from collections import deque
+from collections import deque, defaultdict
 
 def topSort(n, edges):
   # Build adjacency list and in-degree array
@@ -12,7 +12,7 @@ def topSort(n, edges):
     in_degree[v] += 1
 
   # add all nodes with zero dependancy to the Queue
-  q = dequeue([i for i in range(n) if in_degree[i] == 0])
+  q = deque([i for i in range(n) if in_degree[i] == 0])
   topo_order = []
 
   # Process the queue
