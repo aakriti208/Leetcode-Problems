@@ -12,7 +12,7 @@ class Solution:
                 if stack and stack[-1] == closeToOpen[c]:
                     stack.pop()
                 else:
-                    #is there is no match, we return False
+                    #if there is no match, we return False
                     return False
             else:
                 # if the character is an opening bracket, we simply push it to the stack
