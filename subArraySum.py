@@ -10,6 +10,19 @@ class Solution:
             hashMap[prefixSum] = hashMap.get(prefixSum,0) + 1
         return count
         
+    class Solution:
+    def subarraySum(self, nums: List[int], k: int) -> int:
+        hashmap = {0:1}
+        count = 0
+        prefixsum = 0
+        for num in nums:
+            prefixsum += num
+            remove = prefixsum - k
+            count += hashmap.get(remove, 0) 
+            hashmap[prefixsum] = hashmap.get(prefixsum, 0) + 1
+        return count
+
+        
         
     
         """Algorithm Overview                                                                                                                                                                                                                                                                                  
