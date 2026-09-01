@@ -13,3 +13,8 @@ class Solution:
             key = tuple(count)
             res[key].append(s)
         return list(res.values())       
+    
+    
+    # res.items gives: [[[1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0],["eat","tea","ate"]],[[1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0],["tan","nat"]],[[1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0],["bat"]]]
+    # this means that each of the key is associated with all anagrams since their index position will be the same.
+    # but we return only values
